@@ -12,7 +12,7 @@ if "banana" in fruits:
 if "kiwi" not in fruits:
     print("kiwi is not present")
     
-#indexing in list
+#indexing in list add 
 print(fruits[1])    
 
 print(fruits[-3])    
