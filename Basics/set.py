@@ -52,5 +52,5 @@ print(s1)
 
 #keep all values except duplicates
 s1.symmetric_difference_update(s2)
-print(s1)
+print(s1) 
 
