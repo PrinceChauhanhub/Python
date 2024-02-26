@@ -18,4 +18,4 @@ class GHI:
     def __init__(self):
         self._protected_attribute=10  #this is protected modifier
     def _protected_function():        #this is protected modifier
-        pass
+        pass 
