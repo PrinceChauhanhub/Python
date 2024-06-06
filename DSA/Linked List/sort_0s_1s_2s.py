@@ -25,7 +25,7 @@ class LinkedList:
     
     def sort012(self):
         if self.head is None or self.head.nextPtr is None:
-            return head
+            return self.head
         
         count0 = 0
         count1 = 0
