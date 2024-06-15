@@ -16,11 +16,16 @@ def insertBST(root,key):
         else:
             root.left = insertBST(root.left,key)
     return root
-def inOrder(root):
-    if root:
-        inOrder(root.left)
-        print(str(root.data) + " " ,end = " ")
-        inOrder(root.right)        
+
+def searchBST(root, key):
+    if root is None or root.data == key:
+        return True
+    elif root.data > key:
+        return searchBST(root.left,key)
+    else:
+        return searchBST(root.right,key)
+
+    return False
 
 root = Node(50)
 root = insertBST(root,40)
@@ -28,7 +33,7 @@ root = insertBST(root,70)
 root = insertBST(root,60)
 root = insertBST(root,80)
 
-print("Inoder traversal of the Tree :")
-inOrder(root)
-print()
-    
+if (searchBST(root,50)):
+    print("element is in the BST")
+else:
+    print("element is not in the BST")
