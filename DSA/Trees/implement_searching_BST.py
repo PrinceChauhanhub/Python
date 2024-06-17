@@ -19,13 +19,11 @@ def insertBST(root,key):
 
 def searchBST(root, key):
     if root is None or root.data == key:
-        return True
-    elif root.data > key:
+        return root
+    if root.data > key:
         return searchBST(root.left,key)
-    else:
-        return searchBST(root.right,key)
 
-    return False
+    return searchBST(root.right,key)
 
 root = Node(50)
 root = insertBST(root,40)
@@ -33,7 +31,7 @@ root = insertBST(root,70)
 root = insertBST(root,60)
 root = insertBST(root,80)
 
-if (searchBST(root,50)):
+if (searchBST(root,40)):
     print("element is in the BST")
 else:
     print("element is not in the BST")
