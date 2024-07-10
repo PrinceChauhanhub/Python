@@ -23,9 +23,9 @@ def inOrder(root):
         print(str(root.data) + " " ,end = " ")
         inOrder(root.right)  
   
-def minNode(root,ele):
+def minNode(root):
     present = root
-    while present.left is not None:
+    while present.left:
         present = present.left
     return present
 
@@ -47,7 +47,8 @@ def deleteNode(root,ele):
         #find the minimum in right subtree, which is the successor of present rootnode
         tempnode = minNode(root.right)
         root.data = tempnode.data 
-        root.right = deleteNode(root.right,tempnode.data)
+        root.right = deleteNode(root.right,tempnode.data) 
+
     return root
 
 root = Node(50)
@@ -58,5 +59,5 @@ root = insertBST(root,80)
 
 inOrder(root)
 print()
-deleteNode(root,40 )
+deleteNode(root,80)
 inOrder(root)  

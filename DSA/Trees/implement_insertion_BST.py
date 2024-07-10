@@ -28,6 +28,7 @@ root = insertBST(root,70)
 root = insertBST(root,60)
 root = insertBST(root,80)
 
+
 print("Inoder traversal of the Tree :")
 inOrder(root)
 print()
